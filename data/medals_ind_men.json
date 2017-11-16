@@ -1,0 +1,67 @@
+[{
+        "name": "Clas Thunberg",
+        "value": 7,
+        "con": "Europe",
+        "country" : "Finland",
+        "medals"  : [5,1,1],
+        "active"  : "1924–1928"
+},
+{
+        "name": "Ivar Ballangrud",
+        "value": 7,
+        "con": "Europe",
+        "country" : "Norway",
+        "medals"  : [4,2,1],
+        "active"  : "1928–1936"
+},
+{
+        "name": "Sven Kramer",
+        "value": 7,
+        "con": "Europe",
+        "country" : "The Netherlands",
+        "medals"  : [3,2,2],
+        "active"  : "2006–now"
+},
+{
+        "name": "Rintje Ritsma",
+        "value": 6,
+        "con": "Europe",
+        "country" : "The Netherlands",
+        "medals"  : [0,2,4],
+        "active"  : "1992–2006"
+
+},
+{
+        "name": "Roald Larsen",
+        "value": 6,
+        "con": "Europe",
+        "country" : "Norway",
+        "medals"  : [0,2,4],
+        "active"  : "1924–1928"
+
+},
+{
+        "name": "Eric Heiden",
+        "value": 5,
+        "con": "Americas",
+        "country" : "United States",
+        "medals"  : [5,0,0],
+        "active"  : "1976–1980"
+},
+{
+        "name": "Johann Olav Koss",
+        "value": 5,
+        "con": "Europe",
+        "country" : "Norway",
+        "medals"  : [4,1,0],
+        "active"  : "1992–1994"
+},
+{
+        "name": "Chad Hedrick",
+        "value": 5,
+        "con": "Americas",
+        "country" : "United States",
+        "medals"  : [1,2,2],
+        "active"  : "2006–2010"
+}
+]

@@ -1,0 +1,61 @@
+[{
+        "name": "The Netherlands",
+        "value": 105,
+        "con": "Europe",
+        "medals"  : [35,36,34]
+},
+{
+        "name": "Norway",
+        "value": 80,
+        "con": "Europe",
+        "medals"  : [25,28,27]
+},
+{
+        "name": "Russia / Sovjet Union",
+        "value": 73,
+        "con": "Europe",
+        "medals"  : [27,22,24]
+},
+    {
+        "name": "Germany",
+        "value": 72,
+        "con": "Europe",
+        "medals"  : [25,28,19]
+},
+    {
+        "name": "United States",
+        "value": 67,
+        "con": "Americas",
+        "medals"  : [29,22,16]
+},
+{
+        "name": "Canada",
+        "value": 35,
+        "con": "Americas",
+        "medals"  : [8,12,15]
+},
+{
+        "name": "Finland",
+        "value": 24,
+        "con": "Europe",
+        "medals"  : [7,8,9]
+},
+{
+        "name": "Sweden",
+        "value": 16,
+        "con": "Europe",
+        "medals"  : [7,4,5]
+},
+{
+        "name": "Japan",
+        "value": 15,
+        "con": "Asia",
+        "medals"  : [1,5,9]
+},
+{
+        "name": "South Korea",
+        "value": 9,
+        "con": "Asia",
+        "medals"  : [4,4,1]
+}
+]

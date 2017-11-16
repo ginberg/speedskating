@@ -1,0 +1,65 @@
+[{
+        "name": "Claudia Pechstein",
+        "value": 9,
+        "con": "Europe",
+        "country" : "Germany",
+        "medals"  : [5,2,2],
+        "active"  : "1992–now"
+},
+{
+        "name": "Ireen Wust",
+        "value": 8,
+        "con": "Europe",
+        "country" : "The Netherlands",
+        "medals"  : [4,3,1],
+        "active"  : "2006–now"
+},
+{
+        "name": "Karin Enke",
+        "value": 8,
+        "con": "Europe",
+        "country" : "Germany",
+        "medals"  : [3,4,1],
+        "active"  : "1980–1988"
+},
+    {
+        "name": "Gunda Niemann",
+        "value": 8,
+        "con": "Europe",
+        "country" : "Germany",
+        "medals"  : [3,4,1],
+        "active"  : "1988–1998"
+},
+{
+        "name": "Andrea Schöne",
+        "value": 7,
+        "con": "Europe",
+        "country" : "Germany",
+        "medals"  : [1,5,1],
+        "active"  : "1976–1988"
+},
+{
+        "name": "Lidiya Skoblikova",
+        "value": 6,
+        "con": "Europe",
+        "country" : "Sovjet Union",
+        "medals"  : [5,2,2],
+        "active"  : "1960–1968"
+},
+{
+        "name": "Bonnie Blair",
+        "value": 6,
+        "con": "Americas",
+        "country" : "United States",
+        "medals"  : [5,0,1],
+        "active"  : "1984–1994"
+},
+{
+        "name": "Cindy Klassen",
+        "value": 6,
+        "con": "Americas",
+        "country" : "Canada",
+        "medals"  : [1,2,3],
+        "active"  : "2002–2006"
+}
+]

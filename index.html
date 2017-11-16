@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<head>
+	    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    	<meta name="viewport" content="user-scalable = yes">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Speed skating olympic medallists" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://gerinberg.com/speedskating/" />
+		<meta property="og:description" content="Speed skating at the Winter Olympics - all medallists visualized" />
+
+		<title>Speed skating at the Winter Olympics</title>
+		<meta name="author" content="Ger Inberg">
+		<meta name="description" content="Speed skating at the Winter Olympics - all medallists visualized">
+		<meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz">
+		
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet">
+
+		<!-- Styling -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<script src="js/plugins/d3.min.js"></script>
+		<script src="js/annotations.js"></script>
+		<script src="js/colorLegend.js"></script>
+		<script src="js/countryChart.js"></script>
+		<script src="js/individualChart.js"></script>
+
+	</head>
+	<body>
+		
+		<div id="olympic-wrapper">
+			
+			<div class="olympic-section-wrapper head-title-wrapper">
+				<h1 id="olympic-top-title">Speed Skating medalists at the Olympic Games</h1>
+				<h3 id="olympic-top-subtitle">Claudia Pechstein most successfull individual, the Netherlands the best country.</h3>
+			</div>
+			
+			<div class="olympic-section-wrapper">
+				<div id="olympic-introduction">
+				<p class="bold-start">Speed skating is a sport that has been contested at the Winter Olympic Games since the inaugural Games in 1924. Events held at the first Winter Olympics included the men's 500-metre, 1500-metre, 5000-metre, and 10,000-metre races. Points from the four races were combined and counted towards the all-round event, which was dropped following the 1924 Olympics. Speed skating events for women were first held at the 1932 Winter Olympics, as a demonstration sport The first official women's events were held in 1960 in the 500-metre, 1000-metre, 1500-metre, and 3000-metre distances. The men's 1000-metre event was added in 1976 and the women's 5000-metre event was added in 1988. All 10 events have been held at every Olympic Games since, and a team pursuit event for both genders was added in 2006, for a total of 12 medal events.
+        </p>
+				<p>German Claudia Pechstein has won nine medals—five gold, two silver, and two bronze—more than any other speed skater at the Olympics. She is also one of four Winter Olympians to win medals at five straight Olympics. As a country the Netherlands have been the most successfull in the past, they dominated this event by winning 23 medals in 2014.</p>
+				</div>
+			</div>
+
+			<!-- THE chart -->
+			<div id="olympic-chart"></div>
+
+			<!-- legend -->
+			<div class="olympic-section-wrapper head-title-wrapper">
+				<h1 id="olympic-legend-title">How to read the circles</h1>
+			</div>
+			<div class="olympic-section-wrapper">
+				<div id="olympic-feather-legend">
+					<p class="bold-start">Each circle represents a specific speed skating discipline. Each ring of the circle represents an olympic edition, ranging from 1924 till 2018. The left arc of a ring contains the medals of the men, the right side of the woman. The gender arc is split into three parts, one for the gold, silver and bronze medal. The color of a medal represents the continent (Europe, Americas or Asia). </p>
+					<p>Hover over a medal to see the details of the athlete(s), like name and nationality.</p>
+					<p></p>
+				</div>
+			</div>
+			<div id="olympic-legend-visual-wrapper">
+				<div id="olympic-color-legend"></div>
+			</div>
+			
+			<div id="credits">
+				<div class="credit-bold">Created by <a href="http://gerinberg.com/">Ger Inberg</a>. Data scraping in R, data visualization in D3js. 
+				<div class="credit-note">I have used the awesome visualization from Nadieh Bremer about <a href="https://nbremer.github.io/olympicfeathers/">the summer olympics</a> as my inspiration.
+			</div>
+			
+		</div>
+
+		<!-- Tooltip -->
+		<div id="tooltip">
+			<div id="tooltip-container">
+				<div class="tooltip-event"></div>
+				<div class="tooltip-rule"></div>
+				
+				<div id="tooltip-athlete"></div>
+				<div id="tooltip-record"></div>
+				<div id="tooltip-country"></div>
+				<div id="tooltip-edition"></div>
+			</div>
+		</div>
+
+		<!-- Tooltip - Edition -->
+		<div id="tooltip-edition-wrapper">
+			<div id="tooltip-edition-container">				
+				<div id="tooltip-edition-edition"></div>
+				<div id="tooltip-edition-city"></div>
+				<div id="tooltip-edition-continent"></div>
+			</div>
+		</div>
+		
+		<!-- Tooltip - Individual -->
+		<div id="tooltip-individual-wrapper">
+		 <div id="tooltip-individual-container">
+				<div id="tooltip-medals"></div>
+				<div id="tooltip-active"></div>
+				<div id="tooltip-country"></div>
+		 </div>		
+		</div>
+		
+		<!-- Tooltip - Country -->
+		<div id="tooltip-country-wrapper">
+		 <div id="tooltip-country-container">
+				<div id="tooltip-medals"></div>
+		 </div>		
+		</div>
+		
+		<script src="js/script.js"></script>
+		
+		</div>
+		</div>
+	</body>
+</html>
+
+
