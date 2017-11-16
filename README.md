@@ -12,4 +12,4 @@ The visualization is created by using a mix of
 - D3.js v4
 - css
 
-![alt text](pics/wintergames_s.gif "Speed skater medalists at the Olympic Winter Games")
+![alt text](speedskating.gif "Speed skater medalists at the Olympic Winter Games")
