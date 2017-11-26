@@ -428,11 +428,7 @@ d3.json('data/medals.json', function (error, data) {
       .attr("dy", "0.5em")
       .attr("width", "500")
       .attr("height", "500")
-      .html("Mass start is a new olympic discipline in 2018.<p> As the name implies, all competitors are on the ice at one time and start simultaneously, racing over 16 laps of the 400m oval. The Olympic competition begins with two semifinal heats. The top eight skaters from each semifinal advance to the final. <p> But the results of the race aren’t just based on the finish. During the race there are three intermediate sprints (after four, eight and 12 laps). Skaters are awarded points for the sprint (five for first, three for second, one for third) that count towards the final standings. There is also one final sprint. Skaters are awarded 60 points for first, 40 points for second, and 20 points for third, ensuring that the first three finishers of the final sprint will also be ranked as the top three in the race results and get the medals.<p> <img src='massstart.jpg' title='Ivani Blondin (Canada) is one of the favorites for the mass start in Pyeongchang.'/>");
-      //.style("font-size", 15*chartScale + "px");
-      //.call(wrap, 550*chartScale, 1.3);
-	
-	massStart.append("img").attr("src", "massstart.jpg").attr("height", 300).attr("width", 276);
+      .html("Mass start is a new olympic discipline in 2018.<p> As the name implies, all competitors are on the ice at one time and start simultaneously, racing over 16 laps of the 400m oval. The Olympic competition begins with two semifinal heats. The top eight skaters from each semifinal advance to the final. <p> But the results of the race aren’t just based on the finish. During the race there are three intermediate sprints (after four, eight and 12 laps). Skaters are awarded points for the sprint (five for first, three for second, one for third) that count towards the final standings. There is also one final sprint. Skaters are awarded 60 points for first, 40 points for second, and 20 points for third, ensuring that the first three finishers of the final sprint will also be ranked as the top three in the race results and get the medals.<p> <img src='images/massstart.jpg' title='Ivani Blondin (Canada) is one of the favorites for the mass start in Pyeongchang.'/>");
 	
 	
 	////////////////////////////////////////////////////////////
@@ -448,7 +444,7 @@ d3.json('data/medals.json', function (error, data) {
       .attr("y", circleLocations[6].y - 0.4*outerRadius)
       .attr("width", 1.4*outerRadius)
       .attr("height", 0.9*outerRadius)
-      .html("<img src='dutch_team_pursuit.jpg' width=" + 1.4*outerRadius + " height=" +0.9*outerRadius + " title='The team pursuit is introduced in 2006. It is the only team discipline in speed skating. This image shows the Dutch men in the Olypmic final in Sochi.'></img>");
+      .html("<img src='images/dutch_team_pursuit.jpg' width=" + 1.4*outerRadius + " height=" +0.9*outerRadius + " title='The team pursuit is introduced in 2006. It is the only team discipline in speed skating. This image shows the Dutch men in the Olypmic final in Sochi.'></img>");
 
 });//d3.csv
 
