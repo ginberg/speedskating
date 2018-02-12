@@ -475,9 +475,7 @@ function showTooltip(d, color, olympicYear, olympicCity) {
 
 	//Set athlete
 	var athlete = '';
-	if(olympicYear === 2018) {
-		athlete = "To be decided in the coming event";
-	} else if (d.names === "") {
+	if (d.names === "") {
 		athlete = "";
 		d3.select("#tooltip-country").style("font-size", "13px");
 	} else {
