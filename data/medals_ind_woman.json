@@ -1,18 +1,18 @@
 [{
+        "name": "Ireen Wust",
+        "value": 11,
+        "con": "Europe",
+        "country" : "The Netherlands",
+        "medals"  : [5,5,1],
+        "active"  : "2006–now"
+},
+{
         "name": "Claudia Pechstein",
         "value": 9,
         "con": "Europe",
         "country" : "Germany",
         "medals"  : [5,2,2],
         "active"  : "1992–now"
-},
-{
-        "name": "Ireen Wust",
-        "value": 9,
-        "con": "Europe",
-        "country" : "The Netherlands",
-        "medals"  : [4,4,1],
-        "active"  : "2006–now"
 },
 {
         "name": "Karin Enke",

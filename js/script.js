@@ -19,7 +19,7 @@ d3.json('data/medals.json', function (error, data) {
 		arcHeight = 8 * chartScale;
 
 	var startYear = 1924,
-		endYear = 2018;
+		endYear = 2022;
 
 	var warYears = [1940, 1944];
 	
@@ -295,7 +295,7 @@ d3.json('data/medals.json', function (error, data) {
 		
 	//Finally append the paths
 	medalArcs.selectAll(".medal-arc")
-	  	.data(function(d) {return d.male})
+	  	.data(function(d) {console.log(d); return d.male})
 	  	.enter().append("path")
 		  .attr("class", "medal-arc")
 		  .attr("d", arc)
@@ -412,23 +412,25 @@ d3.json('data/medals.json', function (error, data) {
 	var massStart = svg.append("g")
 		.attr("class", "massstart-wrapper");
 		
-	 massStart.append("text")
+	 /*massStart.append("text")
       .attr("class", "mass-title")
       .attr("x", circleLocations[7].x)
       .attr("y", circleLocations[7].y - 1.2*outerRadius)
       .attr("dy", "0.5em")
       .text("Mass start")
       .style("font-size", 18*chartScale + "px")
-      .call(wrap, 300*chartScale, 1.3);
+      .call(wrap, 300*chartScale, 1.3);*/
       
     massStart.append("foreignObject")
       .attr("class", "mass-title")
-      .attr("x", circleLocations[7].x - 1.2*outerRadius)
-      .attr("y", circleLocations[7].y - outerRadius)
+      .attr("x", circleLocations[7].x - 0.75*outerRadius)
+      .attr("y", circleLocations[7].y - 0.4*outerRadius)
       .attr("dy", "0.5em")
-      .attr("width", "500")
-      .attr("height", "500")
-      .html("Mass start is a new olympic discipline in 2018.<p> As the name implies, all competitors are on the ice at one time and start simultaneously, racing over 16 laps of the 400m oval. The Olympic competition begins with two semifinal heats. The top eight skaters from each semifinal advance to the final. <p> But the results of the race aren’t just based on the finish. During the race there are three intermediate sprints (after four, eight and 12 laps). Skaters are awarded points for the sprint (five for first, three for second, one for third) that count towards the final standings. There is also one final sprint. Skaters are awarded 60 points for first, 40 points for second, and 20 points for third, ensuring that the first three finishers of the final sprint will also be ranked as the top three in the race results and get the medals.<p> <img src='images/massstart.jpg' title='Ivani Blondin (Canada) is one of the favorites for the mass start in Pyeongchang.'/>");
+      .attr("width", 1.4*outerRadius)
+      .attr("height", 0.9*outerRadius)
+      .html("<img src='images/massstart.jpg' width=" + 1.4*outerRadius + " height=" +0.9*outerRadius + " title='Mass start is a new olympic discipline in 2018. As the name implies, all competitors are on the ice at one time and start simultaneously, racing over 16 laps of the 400m oval.'></img>");
+      
+      /*.html("Mass start is a new olympic discipline in 2018.<p> As the name implies, all competitors are on the ice at one time and start simultaneously, racing over 16 laps of the 400m oval. The Olympic competition begins with two semifinal heats. The top eight skaters from each semifinal advance to the final. <p> But the results of the race aren’t just based on the finish. During the race there are three intermediate sprints (after four, eight and 12 laps). Skaters are awarded points for the sprint (five for first, three for second, one for third) that count towards the final standings. There is also one final sprint. Skaters are awarded 60 points for first, 40 points for second, and 20 points for third, ensuring that the first three finishers of the final sprint will also be ranked as the top three in the race results and get the medals.<p> <img src='images/massstart.jpg' title='Ivani Blondin (Canada) is one of the favorites for the mass start in Pyeongchang.'/>");*/
 	
 	
 	////////////////////////////////////////////////////////////

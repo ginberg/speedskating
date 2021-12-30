@@ -11,7 +11,7 @@ data <- read_html(URL)
 # get all tables
 tables <- data %>% html_nodes("table[class = 'wikitable plainrowheaders']")
 
-disciplines <- c("500m","1000m", "1500m", "5000m", "10000m","3000m", "Team pursuit") #,"Mass start")
+disciplines <- c("500m","1000m", "1500m", "5000m", "10000m","3000m","Team pursuit","Mass start")
 
 editions <- list(list(edition = 1924, city = "Chamonix", cityContinent = "Europe"),
                  list(edition = 1928, city = "St. Moritz", cityContinent = "Europe"),
@@ -37,7 +37,18 @@ editions <- list(list(edition = 1924, city = "Chamonix", cityContinent = "Europe
                  list(edition = 2006, city = "Turin", cityContinent = "Europe"),
                  list(edition = 2010, city = "Vancouver", cityContinent = "Americas"),
                  list(edition = 2014, city = "Sochi", cityContinent = "Asia"),
-                 list(edition = 2018, city = "Pyeongchang", cityContinent = "Asia"))
+                 list(edition = 2018, city = "Pyeongchang", cityContinent = "Asia"),
+                 list(edition = 2022, city = "Beijing", cityContinent = "Asia"))
+
+get_continent_from_country <- function(country) {
+  continent <- "Europe"
+  if (country %in% c("Canada", "United States")) {
+    continent <- "Americas"
+  } else if (country %in% c("South Korea", "Japan", "China")) {
+    continent <- "Asia"
+  }
+  continent
+}
 
 result <- list()
 # each table is a discipline
@@ -62,7 +73,7 @@ for (discipline in disciplines){
     tablef <- tables[10]
     editionCounterF <- 7
   }else if(discipline == "3000m"){
-    editionCounter <- 23
+    editionCounter <- length(editions)
     editionCounterF <- 7
     tablef <- tables[11]
   }else if(discipline == "5000m"){
@@ -71,15 +82,17 @@ for (discipline in disciplines){
     editionCounterF <- 14
   }else if(discipline == "10000m"){
     table <- tables[5]
-    editionCounterF <- 23
+    editionCounterF <- length(editions)
   }else if(discipline == "Team pursuit"){
     table <- tables[7]
     tablef <- tables[14]
     editionCounter <- 19
     editionCounterF <- 19
   }else if(discipline == "Mass start"){
-    editionCounter <- 23
-    editionCounterF <- 23
+    table <- tables[6]
+    tablef <- tables[13]
+    editionCounter <- 22
+    editionCounterF <- 22
   }
   
   # init result for this discipline
@@ -101,13 +114,24 @@ for (discipline in disciplines){
       event <- tds[1] %>% html_node("a") %>% html_text()
       
       # normal row
+      # if (discipline == "Team pursuit" && grepl("2022", event)) {
+      #   browser()
+      # }
       if(length(tds) == 4){
         editionCounter <- editionCounter + 1
         medals <- list()
         for(j in 2:length(tds)){
           cellContent <- tds[j]
           nameCity <- cellContent %>% html_nodes("a") %>% html_text()
-          res <- list(pos = j-1, names = list(nameCity[1]), con = "Europe", country = nameCity[2]) # the continent is not available in the data, set it manually later if it isn't europe
+          if (discipline == "Team pursuit") {
+            country <- nameCity[1]
+            names   <- nameCity[2:5][complete.cases(nameCity[2:5])]
+          } else {
+            country <- nameCity[2]
+            names   <- nameCity[1]
+          }
+          continent <- get_continent_from_country(country)
+          res <- list(pos = j-1, names = list(names), con = continent, country = country)
           medals <- append(medals, list(res))
         }
         disciplineData$editions[[editionCounter]]$male <- medals
@@ -139,7 +163,15 @@ for (discipline in disciplines){
         for(j in 2:length(tds)){
           cellContent <- tds[j]
           nameCity <- cellContent %>% html_nodes("a") %>% html_text()
-          res <- list(pos = j-1, names = list(nameCity[1]), con = "Europe", country = nameCity[2]) # the continent is not available in the data, set it manually later if it isn't europe
+          if (discipline == "Team pursuit") {
+            country <- nameCity[1]
+            names   <- nameCity[2:5][complete.cases(nameCity[2:5])]
+          } else {
+            country <- nameCity[2]
+            names   <- nameCity[1]
+          }
+          continent <- get_continent_from_country(country)
+          res <- list(pos = j-1, names = list(names), con = continent, country = country)
           medals <- append(medals, list(res))
         }
         disciplineData$editions[[editionCounterF]]$female <- medals

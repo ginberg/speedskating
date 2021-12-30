@@ -315,7 +315,7 @@ function createAnnotations(annotationGroup, timeScale, color, circleLocations, c
 		.attr("dy", "1em")
 		.style("fill", color("Asia"))
 		.style("font-size", fontsizeTitle + "px")
-		.text("Most successful speed skater");
+		.text("Most successful German");
 	//text
 	pechsteinAnn.append("text")
 		.attr("class", "annotation-text")
@@ -323,7 +323,7 @@ function createAnnotations(annotationGroup, timeScale, color, circleLocations, c
 		.attr("y", 0.3*annotationTitlePadding)
 		.attr("dy", "1em")
 		.style("font-size", fontsizeText + "px")
-		.text("Claudia Pechstein is the most successful olympic speed skater by winning 9 medals. She is the most successful German Winter Olympian of all-time. She won her first medal in Albertville (1992) where she became 3rd at the 5000m. She won the gold medal at the 5000m in three consecutive Olympics (1994, 1998, 2002). After the World Championships in February 2009, the International Skating Union accused Pechstein of blood doping and banned her from all competitions for two years. This ban was based on irregular levels of reticulocytes in her blood. Claudia has always denied that she took doping and claims the irregular levels are caused by spherocytosis, a form of blood anemia.")
+		.text("Claudia Pechstein is the 2nd most successful olympic speed skater by winning 9 medals. She is the most successful German Winter Olympian of all-time. She won her first medal in Albertville (1992) where she became 3rd at the 5000m. She won the gold medal at the 5000m in three consecutive Olympics (1994, 1998, 2002). After the World Championships in February 2009, the International Skating Union accused Pechstein of blood doping and banned her from all competitions for two years. This ban was based on irregular levels of reticulocytes in her blood. Claudia has always denied that she took doping and claims the irregular levels are caused by spherocytosis, a form of blood anemia.")
 		.call(wrap, 250*chartScaleFont, lineHeight);
 		
 	////////////////////////////////////////////////////////////
@@ -356,7 +356,7 @@ function createAnnotations(annotationGroup, timeScale, color, circleLocations, c
 		.attr("dy", "1em")
 		.style("fill", color("Europe"))
 		.style("font-size", fontsizeTitle + "px")
-		.text("Ireen Wust");
+		.text("Ireen Wüst");
 	//text
 	wustAnn.append("text")
 		.attr("class", "annotation-text")
@@ -364,7 +364,7 @@ function createAnnotations(annotationGroup, timeScale, color, circleLocations, c
 		.attr("y", wustLength + annotationTitlePadding)
 		.attr("dy", "1em")
 		.style("font-size", fontsizeText + "px")
-		.text("Ireen Wust is the 2nd most successful olympic speed skater by winning 8 medals so far. Will she beat Claudia Pechstein as medal leader in Pyeongchang?")
+		.text("Ireen Wüst is the most successful olympic speed skater by winning 11 medals so far. Will she be able to win another medal in Beijing?")
 		.call(wrap, 200*chartScaleFont, lineHeight);
 	
 	////////////////////////////////////////////////////////////
